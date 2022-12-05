@@ -70,6 +70,30 @@ public class GameController {
     	answerSelected(i);
     }
     
+    @FXML
+    void buttonBClick(ActionEvent event) {
+    	System.out.println("TEST A Button");
+    	int i; 
+    	i = 0;
+    	answerSelected(i);
+    }
+    
+    @FXML
+    void buttonCClick(ActionEvent event) {
+    	System.out.println("TEST A Button");
+    	int i; 
+    	i = 0;
+    	answerSelected(i);
+    }
+    
+    @FXML
+    void buttonDClick(ActionEvent event) {
+    	System.out.println("TEST A Button");
+    	int i; 
+    	i = 0;
+    	answerSelected(i);
+    }
+    
     
     
     
