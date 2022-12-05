@@ -18,7 +18,7 @@ public class GameApplication extends Application {
         stage.show();
     }
 
-    private static ArrayList<Question> questionList;
+    public static ArrayList<Question> questionList;
 
     public static void main(String[] args) {
         questionList = new ArrayList();
