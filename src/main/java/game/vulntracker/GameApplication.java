@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class GameApplication extends Application {
     @Override
@@ -17,7 +18,16 @@ public class GameApplication extends Application {
         stage.show();
     }
 
+    private static ArrayList<Question> questionList;
+
     public static void main(String[] args) {
+        questionList = new ArrayList();
+        String[] f1 = {" ", " ", " ", " "};
+        String[] a1 = {"A. ", "B. ", "C. ", "D. "};
+        int[] r1 = {0, 0, 0, 0};
+        Question q1 = new Question("question?", f1, a1, r1, 0);
+        questionList.add(q1);
+
         launch();
     }
 }
