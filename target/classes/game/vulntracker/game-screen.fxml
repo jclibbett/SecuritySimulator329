@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -56,16 +57,17 @@
             <children>
                 <Button fx:id="buttonA" layoutX="74.0" layoutY="585.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="415.0" text="A. This is the first answer" />
                 <ImageView fitHeight="403.0" fitWidth="610.0" layoutX="192.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../../assets/stock.jpg" />
-                    </image>
+               <image>
+                  <Image url="@../../../../../assets/stock.jpg" />
+               </image>
                 </ImageView>
-                <TextArea fx:id="questionScreen" layoutX="74.0" layoutY="434.0" prefHeight="141.0" prefWidth="842.0" promptText="Question 1" text="Question #1&#10;This is the first question. Which option do you choose?" />
+                <TextArea fx:id="questionScreen" editable="false" layoutX="74.0" layoutY="434.0" prefHeight="141.0" prefWidth="842.0" promptText="Question 1" text="Question #1&#10;This is the first question. Which option do you choose?" />
                 <Button fx:id="buttonB" layoutX="501.0" layoutY="585.0" mnemonicParsing="false" onAction="#answerSelected" prefHeight="39.0" prefWidth="415.0" text="B. This is the second answer" />
                 <Button fx:id="buttonC" layoutX="74.0" layoutY="635.0" mnemonicParsing="false" onAction="#answerSelected" prefHeight="39.0" prefWidth="415.0" text="C. This is the third answer" />
                 <Button fx:id="buttonD" layoutX="501.0" layoutY="635.0" mnemonicParsing="false" onAction="#answerSelected" prefHeight="39.0" prefWidth="415.0" text="D. This is the fourth answer." />
                 <Button fx:id="buttonBack" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="41.0" text="Back" />
                 <Button fx:id="buttonNext" layoutX="927.0" layoutY="485.0" mnemonicParsing="false" onAction="#goNext" prefHeight="39.0" prefWidth="41.0" text="Next" />
+            <ProgressBar fx:id="threatBar" layoutX="74.0" layoutY="679.0" prefHeight="18.0" prefWidth="842.0" progress="0.52" style="-fx-accent: red;" />
             </children>
         </AnchorPane>
     </children>

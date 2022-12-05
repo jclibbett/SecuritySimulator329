@@ -3,7 +3,11 @@ package game.vulntracker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class GameController {
     @FXML
@@ -27,6 +31,9 @@ public class GameController {
     // Text box that contains the question/feedback
     @FXML
     private TextArea questionScreen;
+
+    @FXML
+    private ProgressBar threatBar;
 
     // Function when an answer button is clicked, should check which button is clicked and determine if the answer was right or wrong
     @FXML

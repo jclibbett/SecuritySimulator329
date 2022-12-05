@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -66,6 +67,7 @@
                 <Button fx:id="buttonD" layoutX="501.0" layoutY="635.0" mnemonicParsing="false" onAction="#answerSelected" prefHeight="39.0" prefWidth="415.0" text="D. This is the fourth answer." />
                 <Button fx:id="buttonBack" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="41.0" text="Back" />
                 <Button fx:id="buttonNext" layoutX="927.0" layoutY="485.0" mnemonicParsing="false" onAction="#goNext" prefHeight="39.0" prefWidth="41.0" text="Next" />
+            <ProgressBar fx:id="threatBar" layoutX="74.0" layoutY="679.0" prefHeight="18.0" prefWidth="842.0" progress="0.52" style="-fx-accent: red;" />
             </children>
         </AnchorPane>
     </children>
