@@ -1,6 +1,7 @@
 package game.vulntracker;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
@@ -34,10 +35,14 @@ public class GameController {
 
     @FXML
     private ProgressBar threatBar;
+    
+    private int currentQuestion = 0;
+    
 
     // Function when an answer button is clicked, should check which button is clicked and determine if the answer was right or wrong
-    @FXML
-    void answerSelected(ActionEvent event) {
+    void answerSelected(Integer i) {
+    	
+    	GameApplication.questionList.get(currentQuestion).checkAnswer(i);
 
     }
 
@@ -45,11 +50,27 @@ public class GameController {
     @FXML
     void goBack(ActionEvent event) {
 
+    	currentQuestion += -1;
     }
 
     // Function for when Next button is clicked, should cycle to next question
     @FXML
     void goNext(ActionEvent event) {
 
+    	currentQuestion += 1;
+    	questionScreen.setText(GameApplication.questionList.get(currentQuestion).getQuestion());
+    	
     }
+    
+    @FXML
+    void buttonAClick(ActionEvent event) {
+    	System.out.println("TEST A Button");
+    	int i; 
+    	i = 0;
+    	answerSelected(i);
+    }
+    
+    
+    
+    
 }
