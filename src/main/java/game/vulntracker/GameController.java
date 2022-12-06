@@ -60,10 +60,8 @@ public class GameController {
     	String userAnswer;
     	userAnswer = GameApplication.questionList.get(currentQuestion).checkAnswer(i);
     	
-    	String[] feedbackT;
-    	feedbackT = GameApplication.questionList.get(currentQuestion).getFeedback();
     	String feedbackText;
-    	feedbackText = feedbackT[btnNumber];
+    	feedbackText = GameApplication.questionList.get(currentQuestion).getFeedback();
     	
     	int isCorrect;
     	if (userAnswer.contains("The answer is correct.")) {
@@ -245,7 +243,7 @@ public class GameController {
 		Alert howto = new Alert(AlertType.INFORMATION);
 		howto.setTitle("How to Play");
 		howto.setHeaderText("How to play Company Vulnerabilities Quiz");
-		howto.setContentText("You will have to answer a total of 15 questions to beat the game. Every question will have 4 options to choose from, with only 1 option being correct. A Threat Meter is displayed at the bottom of the screen, and will rise every time a question is answered incorrectly. If the Threat Meter is completely filled, you will lose the game. Good luck!");
+		howto.setContentText("You will be presented with a question and 4 answers. You must try to pick the correct answer. There are a total of 15 questions you must answer to complete the game.\nAfter picking an answer, you will be given feedback for that question. Press 'Next' to advance to the next question.\nA Threat Meter is displayed at the bottom of the screen and will be empty when you start the game. It will rise every time a question is answered incorrectly, and some answers may raise it more than others. If the Threat Meter is completely filled, you will lose the game.\nGood luck!");
 		howto.showAndWait();
 	}
 
@@ -265,7 +263,6 @@ public class GameController {
 			}
 			System.exit(0);
 		}
-
 
 	}
 
