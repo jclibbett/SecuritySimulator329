@@ -302,9 +302,19 @@ public class GameController {
 		buttonNext.setDisable(false);
 		buttonBack.setDisable(false);
 	}
-    
-    public void initialized(URL url, ResourceBundle rb) {
-		threatBar.progressProperty().bind(riskUpdate);
-		
+
+	@FXML
+	public void initialize() {
+		String question;
+		question = GameApplication.questionList.get(currentQuestion).getQuestion();
+		questionScreen.setText(question);
+		String[] options;
+		options = GameApplication.questionList.get(currentQuestion).getAnswers();
+		buttonA.setText(options[0]);
+		buttonB.setText(options[1]);
+		buttonC.setText(options[2]);
+		buttonD.setText(options[3]);
+		Image picture = new Image(getClass().getResourceAsStream("/images/image.png"));
+		image.setImage(picture);
 	}
 }
