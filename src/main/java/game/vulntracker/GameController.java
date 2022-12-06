@@ -44,6 +44,7 @@ public class GameController {
     private int btnNumber;
     private String whichButton;
     private double totalrisk = 0.0;
+	private int totalCorrect = 0;
 
 	static DoubleProperty riskUpdate = new SimpleDoubleProperty(.0);
 
@@ -104,20 +105,22 @@ public class GameController {
     	switch(isCorrect) {
     	case 1:
     		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected: " + whichButton + System.lineSeparator() + userAnswer);
+			totalCorrect += 1;
 			break;
     	case 0:
     		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected: " + whichButton + System.lineSeparator() + userAnswer + feedbackText);
 			break;
     	}
     	
-    	if (totalrisk == 100) {
-    		Alert end = new Alert(AlertType.INFORMATION);
-    		end.setTitle("Game has ended");
-    		end.setHeaderText("Threat Level: 100%. Game Over");
-    		end.setContentText("Your threat level has reached 100, you have lost the game. Program will exit in 5 seconds.");
-    		
+    	if (totalrisk >= 1) {
+    		Alert end = new Alert(AlertType.WARNING);
+    		end.setTitle("Game Over");
+    		end.setHeaderText("Oh no! Your Threat Level has reached 100%.");
+    		end.setContentText("Your company's security systems were breached by hackers and your data was compromised. Program now exit.");
+			end.showAndWait();
+
     		try {
-				Thread.sleep(5000);
+				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -131,10 +134,15 @@ public class GameController {
     // Function for when Back button is clicked, should cycle to previous question with its feedback
     @FXML
     void goBack(ActionEvent event) {
+		buttonNext.setText("Next");
 
 		answersOn();
 
     	currentQuestion -= 1;
+
+		if (currentQuestion == 0) {
+			buttonBack.setVisible(false);
+		}
     	
     	String question;
     	question = GameApplication.questionList.get(currentQuestion).getQuestion();
@@ -155,10 +163,32 @@ public class GameController {
     // Function for when Next button is clicked, should cycle to next question
     @FXML
     void goNext(ActionEvent event) {
-
+		buttonBack.setVisible(true);
 		answersOn();
 
     	currentQuestion += 1;
+
+
+		if (currentQuestion == GameApplication.questionList.size()-1) {
+			buttonNext.setText("End");
+		}
+
+		if (currentQuestion == GameApplication.questionList.size()) {
+			Alert end = new Alert(AlertType.INFORMATION);
+			end.setTitle("Congratulations!");
+			end.setHeaderText("Good job! You have completed all questions and successfully kept your company secure.");
+			String content = String.format("Your final threat level was %,.0f percent, and you answered %d questions correctly!", totalrisk*100, totalCorrect);
+			end.setContentText(content);
+			end.showAndWait();
+
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.exit(0);
+		}
     	
     	String question;
     	question = GameApplication.questionList.get(currentQuestion).getQuestion();

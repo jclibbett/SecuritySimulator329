@@ -65,8 +65,8 @@
                 <Button fx:id="buttonB" layoutX="501.0" layoutY="585.0" mnemonicParsing="false" onAction="#buttonBClick" prefHeight="39.0" prefWidth="415.0" text="B. This is the second answer" />
                 <Button fx:id="buttonC" layoutX="74.0" layoutY="635.0" mnemonicParsing="false" onAction="#buttonCClick" prefHeight="39.0" prefWidth="415.0" text="C. This is the third answer" />
                 <Button fx:id="buttonD" layoutX="501.0" layoutY="635.0" mnemonicParsing="false" onAction="#buttonDClick" prefHeight="39.0" prefWidth="415.0" text="D. This is the fourth answer." />
-                <Button fx:id="buttonBack" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="41.0" text="Back" />
-                <Button fx:id="buttonNext" layoutX="927.0" layoutY="485.0" mnemonicParsing="false" onAction="#goNext" prefHeight="39.0" prefWidth="41.0" text="Next" />
+                <Button fx:id="buttonBack" disable="true" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#goBack" prefHeight="39.0" prefWidth="41.0" text="Back" />
+                <Button fx:id="buttonNext" disable="true" layoutX="927.0" layoutY="485.0" mnemonicParsing="false" onAction="#goNext" prefHeight="39.0" prefWidth="41.0" text="Next" />
             <ProgressBar fx:id="threatBar" layoutX="74.0" layoutY="679.0" prefHeight="18.0" prefWidth="842.0" progress="0.0" style="-fx-accent: red;" />
             </children>
         </AnchorPane>
