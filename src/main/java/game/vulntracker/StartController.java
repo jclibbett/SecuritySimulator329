@@ -38,7 +38,7 @@ public class StartController {
     void aboutButtonClicked(ActionEvent event) {
         Alert about = new Alert(AlertType.INFORMATION);
         about.setTitle("About Project");
-        about.setHeaderText("CPSC 329 Fall 2022 Final Project: Company Vulnerabilities Quiz");
+        about.setHeaderText("CPSC 329 Fall 2022 Final Project: Security Simulator");
         about.setContentText("This game has you play as an employee at a tech company and it is your job to make decisions to protect the company's data. It aims to teach the player about the many vulnerabilities your data can face and how to prevent attacks.\nThis project was made by:\nJustin Clibbett\nShaheryar Syed\nDevon Harstrom\nSean Anselmo\nAreez Nadeem");
         about.showAndWait();
     }
@@ -65,7 +65,7 @@ public class StartController {
     void howtoButtonClicked(ActionEvent event) {
         Alert howto = new Alert(AlertType.INFORMATION);
         howto.setTitle("How to Play");
-        howto.setHeaderText("How to play Company Vulnerabilities Quiz");
+        howto.setHeaderText("How to play Security Simulator");
         howto.setContentText("1. You will be presented with a question and 4 answers. You must try to pick the correct answer. There are a total of 15 questions you must answer to complete the game.\n\n2. After picking an answer, you will be given feedback for that question. Press 'Next' to advance to the next question.\n\n3. A Threat Meter is displayed at the bottom of the screen and will be empty when you start the game. It will rise every time a question is answered incorrectly, and some answers may raise it more than others. If the Threat Meter is completely filled, you will lose the game.\n\n4. You can also press 'Back' to go to the previous question and try again. Be careful, because if you get it wrong again, it will still increase the Threat Meter.\n\nGood luck!");
         howto.showAndWait();
     }

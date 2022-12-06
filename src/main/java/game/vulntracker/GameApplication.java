@@ -14,7 +14,7 @@ public class GameApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("start-screen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 990, 730);
-        stage.setTitle("CPSC329 Final Project: Security Simulator");
+        stage.setTitle("Security Simulator");
         stage.setScene(scene);
         stage.show();
     }
