@@ -104,8 +104,8 @@ public class GameApplication extends Application {
         Question q10 = new Question(qs10, f10, a10, r10, 2, i10);
         questionList.add(q10);
 
-        String qs11 = "Which of these is the most secure authentication method?";
-        String f11 = "Just usernames is not nearly enough to make a system secure. Answers to secret security questions and two-factor authentication are on the right track but more can be done. That’s why multi-step authentication is the correct answer.";
+        String qs11 = "How can you prevent viruses on your device?";
+        String f11 = "You will not be fine regardless, a virus might be hidden and you may not know it is on your device. While not going on websites or downloading files might prevent viruses it is unreasonable to never do this. There is a simple solution and that is to download a trusted antivirus such as Bitdefender.";
         String[] a11 = {"A. Have an antivirus", "B. Don't download files", "C. Don’t go on websites", "D. You’ll be fine regardless"};
         int[] r11 = {0, 10, 10, 20}; // risk values
         String i11 = "/images/q11.png";

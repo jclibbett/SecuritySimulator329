@@ -66,7 +66,7 @@ public class StartController {
         Alert howto = new Alert(AlertType.INFORMATION);
         howto.setTitle("How to Play");
         howto.setHeaderText("How to play Company Vulnerabilities Quiz");
-        howto.setContentText("You will be presented with a question and 4 answers. You must try to pick the correct answer. There are a total of 15 questions you must answer to complete the game.\nAfter picking an answer, you will be given feedback for that question. Press 'Next' to advance to the next question.\nA Threat Meter is displayed at the bottom of the screen and will be empty when you start the game. It will rise every time a question is answered incorrectly, and some answers may raise it more than others. If the Threat Meter is completely filled, you will lose the game.\nGood luck!");
+        howto.setContentText("1. You will be presented with a question and 4 answers. You must try to pick the correct answer. There are a total of 15 questions you must answer to complete the game.\n\n2. After picking an answer, you will be given feedback for that question. Press 'Next' to advance to the next question.\n\n3. A Threat Meter is displayed at the bottom of the screen and will be empty when you start the game. It will rise every time a question is answered incorrectly, and some answers may raise it more than others. If the Threat Meter is completely filled, you will lose the game.\n\n4. You can also press 'Back' to go to the previous question and try again. Be careful, because if you get it wrong again, it will still increase the Threat Meter.\n\nGood luck!");
         howto.showAndWait();
     }
 
