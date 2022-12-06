@@ -20,12 +20,14 @@ public class Question {
     public String[] getFeedback() {return this.feedback;}
 
     public String[] getAnswers() {return this.answerList;}
+    
+    public int[] getThreatLevel() {return this.risks;}
 
     public String checkAnswer(int i) {
         if (i == this.answerIndex) {
-            return "That is correct!";
+            return "The answer is correct.";
         } else {
-            return "That is incorrect.";
+            return "The answer is incorrect because: ";
         }
     }
 }

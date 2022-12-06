@@ -24,6 +24,7 @@ public class GameApplication extends Application {
         questionList = new ArrayList();
         String[] f1 = {" ", " ", " ", " "};
         String[] a1 = {"A. ", "B. ", "C. ", "D. "};
+        // Risk factor per question
         int[] r1 = {0, 0, 0, 0};
         Question q1 = new Question("question?", f1, a1, r1, 0);
         questionList.add(q1);
