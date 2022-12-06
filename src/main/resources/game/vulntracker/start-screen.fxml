@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.vulntracker.StartController">
+   <children>
+      <VBox prefHeight="727.0" prefWidth="989.0">
+          <children>
+              <MenuBar VBox.vgrow="NEVER">
+                  <menus>
+                      <Menu mnemonicParsing="false" text="Menu">
+                          <items>
+                        <MenuItem mnemonicParsing="false" onAction="#howtoButtonClicked" text="How To Play" />
+                              <MenuItem mnemonicParsing="false" onAction="#aboutButtonClicked" text="About Project" />
+                        <MenuItem mnemonicParsing="false" onAction="#exitButtonClicked" text="Exit" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+              <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="520.0" prefWidth="842.0" VBox.vgrow="ALWAYS">
+                  <children>
+                      <Button fx:id="buttonStart" layoutX="74.0" layoutY="585.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="39.0" prefWidth="415.0" text="Start Game" />
+                      <TextArea fx:id="startScreen" editable="false" layoutX="74.0" layoutY="346.0" prefHeight="229.0" prefWidth="842.0" promptText="Question 1" text="Welcome to the simulation in which you have been hired to work for a company as a member on the security team. Your job is to protect the company's data. Throughout the simulation, random events or questions will appear and you will attempt to choose the best option. Incorrect answers will increase the threat on your threat bar similar to a health bar. This is found on the bottom of your screen once you start. The goal is to keep the threat low. If you make unsafe choices and the threat gets high enough the game ends. Not every question might be completely wrong, but there will be a best solution. After each question or event you will receive feedback about the question. It will explain the pros and cons of each choice. Keep our company safe!" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextArea>
+                      <Button fx:id="buttonHowto" layoutX="501.0" layoutY="585.0" mnemonicParsing="false" onAction="#howtoButtonClicked" prefHeight="39.0" prefWidth="415.0" text="How to Play" />
+                      <Button fx:id="buttonExit" layoutX="74.0" layoutY="635.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="39.0" prefWidth="415.0" text="Exit Game" />
+                      <Button fx:id="buttonAbout" layoutX="501.0" layoutY="635.0" mnemonicParsing="false" onAction="#aboutButtonClicked" prefHeight="39.0" prefWidth="415.0" text="About this Project" />
+                  <Label layoutX="174.0" layoutY="97.0" text="CPSC 329 Final Project">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="229.0" layoutY="191.0" text="Security Simulator">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+                  </children>
+              </AnchorPane>
+          </children>
+      </VBox>
+   </children>
+</AnchorPane>
