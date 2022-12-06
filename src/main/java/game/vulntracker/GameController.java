@@ -149,8 +149,9 @@ public class GameController {
 			buttonBack.setVisible(false);
 		}
     	
-    	String question;
-    	question = GameApplication.questionList.get(currentQuestion).getQuestion();
+    	String questionString;
+    	questionString = GameApplication.questionList.get(currentQuestion).getQuestion();
+		String question = String.format("Question #%d\n"+questionString, currentQuestion+1);
     	questionScreen.setText(question);
     	
     	String[] options;
@@ -179,7 +180,6 @@ public class GameController {
 
     	currentQuestion += 1;
 
-
 		if (currentQuestion == GameApplication.questionList.size()-1) {
 			buttonNext.setText("End");
 		}
@@ -200,10 +200,11 @@ public class GameController {
 			}
 			System.exit(0);
 		}
-    	
-    	String question;
-    	question = GameApplication.questionList.get(currentQuestion).getQuestion();
-    	questionScreen.setText(question);
+
+		String questionString;
+		questionString = GameApplication.questionList.get(currentQuestion).getQuestion();
+		String question = String.format("Question #%d\n"+questionString, currentQuestion+1);
+		questionScreen.setText(question);
     	
     	String[] options;
     	options = GameApplication.questionList.get(currentQuestion).getAnswers();
@@ -314,9 +315,12 @@ public class GameController {
 		buttonB.setWrapText(true);
 		buttonC.setWrapText(true);
 		buttonD.setWrapText(true);
-		String question;
-		question = GameApplication.questionList.get(currentQuestion).getQuestion();
+
+		String questionString;
+		questionString = GameApplication.questionList.get(currentQuestion).getQuestion();
+		String question = String.format("Question #%d\n"+questionString, currentQuestion+1);
 		questionScreen.setText(question);
+
 		String[] options;
 		options = GameApplication.questionList.get(currentQuestion).getAnswers();
 		buttonA.setText(options[0]);
@@ -328,5 +332,6 @@ public class GameController {
 		image.setFitHeight(408);
 		image.setPreserveRatio(true);
 		image.setImage(picture);
+		buttonBack.setVisible(false);
 	}
 }
