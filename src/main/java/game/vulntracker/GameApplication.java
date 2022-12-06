@@ -19,7 +19,7 @@ public class GameApplication extends Application {
         stage.show();
     }
 
-    private static ArrayList<Question> questionList;
+    public static ArrayList<Question> questionList;
 
     public static void main(String[] args) {
         questionList = new ArrayList();
@@ -27,7 +27,8 @@ public class GameApplication extends Application {
         // Add a question format
         String[] f1 = {" ", " ", " ", " "};
         String[] a1 = {"A. ", "B. ", "C. ", "D. "};
-        int[] r1 = {0, 0, 0, 0};
+        // Risk factor per question
+        int[] r1 = {0, 5, 25, 50};
         Question q1 = new Question("question?", f1, a1, r1, 0);
         questionList.add(q1);
 
