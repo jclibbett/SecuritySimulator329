@@ -21,24 +21,34 @@ import java.util.Collections;
 public class GameApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("start-screen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 990, 730);
-        stage.setTitle("Security Simulator");
-        stage.setScene(scene);
-        stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("start-screen.fxml")); // Gets the first scene, which is the start menu
+        Scene scene = new Scene(fxmlLoader.load(), 990, 730); // Sets screen size
+        stage.setTitle("Security Simulator"); // Sets application title
+        stage.setScene(scene); // Puts scene on the stage
+        stage.show(); // Shows the stage (window)
     }
 
+    // Global Variable that contains a list of all questions
     public static ArrayList<Question> questionList;
 
     public static void main(String[] args) {
+        // Initializes question list
         questionList = new ArrayList<Question>();
 
+        // Creates each question and adds it to the list
+        // Sets the question string
         String qs1 = "You’ve been tasked with creating certain requirements for setting company passwords. What requirements offer the best security?";
+        // Sets the feedback string
         String f1 = "Setting no requirement is a risk as this means passwords could be common passwords. Thus adding requirements similar to the NIST password guidelines such as minimum password length as well as this having a combination of numbers, capital/lower case letters and symbols will increase attack time.";
+        // Sets the answer list
         String[] a1 = {"A. No requirements are needed to offer security ", "B. Set the recruitment to have at least one number and one Capital letter ", "C. Set the recruitment to have the password length of at least 12 letters as well as at least one number, one Capital letter and one symbol. Requirements similar to the NIST password guidelines ", "D. Set the recruitment to have the password length of at least 12 letters "};
-        int[] r1 = {20, 10, 0, 10}; // risk values
+        // Sets the risk levels
+        int[] r1 = {20, 10, 0, 10};
+        // Sets the image file path
         String i1 = "/images/q1.jpg";
+        // Creates the question
         Question q1 = new Question(qs1, f1, a1, r1, 2, i1);
+        // Adds question to list
         questionList.add(q1);
 
         String qs2 = "You’ve been tasked with storing created passwords on the company server. What is your method for encrypting passwords?";
@@ -274,11 +284,13 @@ public class GameApplication extends Application {
         Question q30 = new Question(qs30, f30, a30, r30, 3, i30);
         questionList.add(q30);
 
-        Collections.shuffle(questionList);
-        for (int i = questionList.size()-1; i > 14; i--) {
+        // Gets a list of 15 randomized questions
+        Collections.shuffle(questionList); // Shuffles the question list
+        for (int i = questionList.size()-1; i > 14; i--) { // Loop removes questions from the end of the list until there are only 15 left
             questionList.remove(i);
         }
 
+        // Launches application
         launch();
     }
 }
