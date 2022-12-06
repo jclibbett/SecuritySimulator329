@@ -17,17 +17,17 @@ public class Question {
 
     public String getQuestion() {return this.question;}
 
-    public String getFeedback(int i) {return this.feedback[i];}
+    public String[] getFeedback() {return this.feedback;}
 
-    public String getAnswer(int i) {return this.answerList[i];}
-
-    public int getRisk(int i) {return this.risks[i];}
+    public String[] getAnswers() {return this.answerList;}
+    
+    public int[] getThreatLevel() {return this.risks;}
 
     public String checkAnswer(int i) {
         if (i == this.answerIndex) {
-            return "That is correct!";
+            return "The answer is correct.";
         } else {
-            return "That is incorrect.";
+            return "The answer is incorrect because: ";
         }
     }
 }
