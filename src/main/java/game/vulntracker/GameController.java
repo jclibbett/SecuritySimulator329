@@ -117,11 +117,11 @@ public class GameController {
 			break;
     	}
     	
-    	if (totalrisk >= 1) {
+    	if (totalrisk >= 1.00) {
     		Alert end = new Alert(AlertType.WARNING);
     		end.setTitle("Game Over");
     		end.setHeaderText("Oh no! Your Threat Level has reached 100%.");
-    		end.setContentText("Your company's security systems were breached by hackers and your data was compromised. Program now exit.");
+    		end.setContentText("Your company's security systems were breached by hackers and your data was compromised. Program will now exit.");
 			end.showAndWait();
 
     		try {
@@ -308,6 +308,10 @@ public class GameController {
 
 	@FXML
 	public void initialize() {
+		buttonA.setWrapText(true);
+		buttonB.setWrapText(true);
+		buttonC.setWrapText(true);
+		buttonD.setWrapText(true);
 		String question;
 		question = GameApplication.questionList.get(currentQuestion).getQuestion();
 		questionScreen.setText(question);
