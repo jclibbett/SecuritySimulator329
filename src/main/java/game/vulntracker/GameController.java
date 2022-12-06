@@ -5,13 +5,11 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class GameController {
@@ -232,6 +230,44 @@ public class GameController {
     	this.btnNumber = 3;
     	answerSelected(btnNumber);
     }
+
+	@FXML
+	void aboutClicked(ActionEvent event){
+		Alert about = new Alert(AlertType.INFORMATION);
+		about.setTitle("About Project");
+		about.setHeaderText("CPSC 329 Fall 2022 Final Project: Company Vulnerabilities Quiz");
+		about.setContentText("This game has you play as an employee at a tech company and it is your job to make decisions to protect the company's data. It aims to teach the player about the many vulnerabilities your data can face and how to prevent attacks.\nThis project was made by:\nJustin Clibbett\nShaheryar Syed\nDevon Harstrom\nSean Anselmo\nAreez Nadeem");
+		about.showAndWait();
+	}
+
+	@FXML
+	void howtoplayClicked(ActionEvent event) {
+		Alert howto = new Alert(AlertType.INFORMATION);
+		howto.setTitle("How to Play");
+		howto.setHeaderText("How to play Company Vulnerabilities Quiz");
+		howto.setContentText("You will have to answer a total of 15 questions to beat the game. Every question will have 4 options to choose from, with only 1 option being correct. A Threat Meter is displayed at the bottom of the screen, and will rise every time a question is answered incorrectly. If the Threat Meter is completely filled, you will lose the game. Good luck!");
+		howto.showAndWait();
+	}
+
+	@FXML
+	void exitClicked(ActionEvent event) {
+		Alert exit = new Alert(AlertType.CONFIRMATION);
+		exit.setTitle("Exit Program");
+		exit.setHeaderText("Would you like to exit the program?");
+		exit.setContentText("Click 'OK' to exit.");
+		Optional<ButtonType> result = exit.showAndWait();
+		if (result.get() == ButtonType.OK) {
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.exit(0);
+		}
+
+
+	}
 
 
 	private void answersOff() {
