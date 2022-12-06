@@ -90,7 +90,7 @@ public class GameController {
     	case 1:
     		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected:" + whichButton + System.lineSeparator() + userAnswer);
     	case 0:
-    		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected:" + whichButton + System.lineSeparator() + feedbackText);
+    		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected:" + whichButton + System.lineSeparator() + userAnswer + feedbackText);
     	}
     	 		
     		
