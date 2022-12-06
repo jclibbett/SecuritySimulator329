@@ -164,6 +164,7 @@ public class GameController {
 		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
 		image.setFitWidth(612);
 		image.setFitHeight(408);
+		image.setPreserveRatio(true);
 		image.setImage(picture);
 
 		nextbackOff();
@@ -215,6 +216,7 @@ public class GameController {
     	Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
 		image.setFitWidth(612);
 		image.setFitHeight(408);
+		image.setPreserveRatio(true);
     	image.setImage(picture);
     	
 		nextbackOff();
@@ -324,6 +326,7 @@ public class GameController {
 		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
 		image.setFitWidth(612);
 		image.setFitHeight(408);
+		image.setPreserveRatio(true);
 		image.setImage(picture);
 	}
 }
