@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="727.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.vulntracker.GameController">
+<VBox prefHeight="727.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.vulntracker.GameController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -27,7 +27,7 @@
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="520.0" prefWidth="842.0" VBox.vgrow="ALWAYS">
             <children>
                 <Button fx:id="buttonA" layoutX="74.0" layoutY="585.0" mnemonicParsing="false" onAction="#buttonAClick" prefHeight="39.0" prefWidth="415.0" text="A. This is the first answer" textOverrun="CLIP" />
-                <ImageView fx:id="image" fitHeight="403.0" fitWidth="610.0" layoutX="192.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="image" fitHeight="408.0" fitWidth="612.0" layoutX="192.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../assets/stock.jpg" />
                </image>

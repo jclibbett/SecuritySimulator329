@@ -162,6 +162,9 @@ public class GameController {
     	buttonD.setText(options[3]);
 
 		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
+		image.setPreserveRatio(true);
 		image.setImage(picture);
 
 		nextbackOff();
@@ -211,6 +214,9 @@ public class GameController {
     	buttonD.setText(options[3]);
     	
     	Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
+		image.setPreserveRatio(true);
     	image.setImage(picture);
     	
 		nextbackOff();
@@ -218,28 +224,24 @@ public class GameController {
     
     @FXML
     void buttonAClick(ActionEvent event) {
-    	System.out.println("TEST A Button");
     	this.btnNumber = 0;
     	answerSelected(btnNumber);
     }
     
     @FXML
     void buttonBClick(ActionEvent event) {
-    	System.out.println("TEST B Button");
     	this.btnNumber = 1;
     	answerSelected(btnNumber);
     }
     
     @FXML
     void buttonCClick(ActionEvent event) {
-    	System.out.println("TEST C Button");
     	this.btnNumber = 2;
     	answerSelected(btnNumber);
     }
     
     @FXML
     void buttonDClick(ActionEvent event) {
-    	System.out.println("TEST D Button");
     	this.btnNumber = 3;
     	answerSelected(btnNumber);
     }
@@ -321,7 +323,10 @@ public class GameController {
 		buttonB.setText(options[1]);
 		buttonC.setText(options[2]);
 		buttonD.setText(options[3]);
-		Image picture = new Image(getClass().getResourceAsStream("/images/image.png"));
+		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
+		image.setPreserveRatio(true);
 		image.setImage(picture);
 	}
 }
