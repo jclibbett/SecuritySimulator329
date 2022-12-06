@@ -162,6 +162,8 @@ public class GameController {
     	buttonD.setText(options[3]);
 
 		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
 		image.setImage(picture);
 
 		nextbackOff();
@@ -211,6 +213,8 @@ public class GameController {
     	buttonD.setText(options[3]);
     	
     	Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
     	image.setImage(picture);
     	
 		nextbackOff();
@@ -317,7 +321,9 @@ public class GameController {
 		buttonB.setText(options[1]);
 		buttonC.setText(options[2]);
 		buttonD.setText(options[3]);
-		Image picture = new Image(getClass().getResourceAsStream("/images/image.png"));
+		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
+		image.setFitWidth(612);
+		image.setFitHeight(408);
 		image.setImage(picture);
 	}
 }
