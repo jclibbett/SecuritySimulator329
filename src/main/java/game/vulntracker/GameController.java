@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -91,6 +93,21 @@ public class GameController {
     		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected:" + whichButton + System.lineSeparator() + userAnswer);
     	case 0:
     		questionScreen.setText("The question was:" + System.lineSeparator() + question + System.lineSeparator() + "You selected:" + whichButton + System.lineSeparator() + userAnswer + feedbackText);
+    	}
+    	
+    	if (totalrisk == 100) {
+    		Alert end = new Alert(AlertType.INFORMATION);
+    		end.setTitle("Game has ended");
+    		end.setHeaderText("Threat Level: 100%. Game Over");
+    		end.setContentText("Your threat level has reached 100, you have lost the game. Program will exit in 5 seconds.");
+    		
+    		try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		System.exit(0);
     	}
     	 		
     		
