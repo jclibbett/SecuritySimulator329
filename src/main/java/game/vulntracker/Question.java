@@ -1,3 +1,12 @@
+// CPSC329 Fall 2022 Final Project: Security Simulator
+// A question and answers game where the player works at a company and must make decisions to protect the company's data
+// Group Members:
+// Justin Clibbett
+// Devon Harstrom
+// Shaheryar Syed
+// Sean Anselmo
+// Areez Nadeem
+
 package game.vulntracker;
 
 public class Question {

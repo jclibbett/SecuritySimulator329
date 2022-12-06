@@ -1,3 +1,12 @@
+// CPSC329 Fall 2022 Final Project: Security Simulator
+// A question and answers game where the player works at a company and must make decisions to protect the company's data
+// Group Members:
+// Justin Clibbett
+// Devon Harstrom
+// Shaheryar Syed
+// Sean Anselmo
+// Areez Nadeem
+
 package game.vulntracker;
 
 import javafx.beans.property.DoubleProperty;
@@ -327,11 +336,13 @@ public class GameController {
 		buttonB.setText(options[1]);
 		buttonC.setText(options[2]);
 		buttonD.setText(options[3]);
+
 		Image picture = new Image(getClass().getResourceAsStream(GameApplication.questionList.get(currentQuestion).getImage()));
 		image.setFitWidth(612);
 		image.setFitHeight(408);
 		image.setPreserveRatio(true);
 		image.setImage(picture);
+
 		buttonBack.setVisible(false);
 	}
 }
