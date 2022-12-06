@@ -17,9 +17,11 @@ public class Question {
 
     public String getQuestion() {return this.question;}
 
-    public String[] getFeedback() {return this.feedback;}
+    public String getFeedback(int i) {return this.feedback[i];}
 
-    public String[] getAnswers() {return this.answerList;}
+    public String getAnswer(int i) {return this.answerList[i];}
+
+    public int getRisk(int i) {return this.risks[i];}
 
     public String checkAnswer(int i) {
         if (i == this.answerIndex) {

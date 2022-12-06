@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameApplication extends Application {
     @Override
@@ -22,11 +23,18 @@ public class GameApplication extends Application {
 
     public static void main(String[] args) {
         questionList = new ArrayList();
+
+        // Add a question format
         String[] f1 = {" ", " ", " ", " "};
         String[] a1 = {"A. ", "B. ", "C. ", "D. "};
         int[] r1 = {0, 0, 0, 0};
         Question q1 = new Question("question?", f1, a1, r1, 0);
         questionList.add(q1);
+
+        Collections.shuffle(questionList);
+        for (int i = questionList.size(); i > 14; i--) {
+            questionList.remove(i);
+        }
 
         launch();
     }
