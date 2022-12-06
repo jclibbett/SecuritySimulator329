@@ -305,5 +305,6 @@ public class GameController {
     
     public void initialized(URL url, ResourceBundle rb) {
 		threatBar.progressProperty().bind(riskUpdate);
+		
 	}
 }

@@ -22,7 +22,7 @@ public class GameApplication extends Application {
     public static ArrayList<Question> questionList;
 
     public static void main(String[] args) {
-        questionList = new ArrayList();
+        questionList = new ArrayList<Question>();
 
         String qs1 = "You’ve been tasked with creating certain requirements for setting company passwords. What requirements offer the best security?";
         String f1 = "Setting no requirement is a risk as this means passwords could be common passwords. Thus adding requirements similar to the NIST password guidelines such as minimum password length as well as this having a combination of numbers, capital/lower case letters and symbols will increase attack time.";
