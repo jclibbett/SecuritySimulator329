@@ -96,8 +96,6 @@ public class GameController {
 
     	totalrisk += riskLevelInt/100;
 
-		System.out.printf("Current risk level: %,.0f percent", totalrisk*100);
-
 		threatBar.setProgress(totalrisk);
     	
     	switch (i) {
