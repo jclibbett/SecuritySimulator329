@@ -51,6 +51,8 @@ public class GameApplication extends Application {
         // Adds question to list
         questionList.add(q1);
 
+        /** Repeated 30 times **/
+        
         String qs2 = "You’ve been tasked with storing created passwords on the company server. What is your method for encrypting passwords?";
         String f2 = "Plaintext involves no encryption so is very easy to access if hacked. MD-5 has been cracked, so it is easy to decrypt, which is unsafe. SHA-256 is currently the best and most common hash function used. Salting the passwords before hashing using SHA-256 is the best option as salting ensures that if two people use the same passwords, the passwords will be stored as two different strings of characters rather than the same ones.";
         String[] a2 = {"A. No method, just store the passwords as plaintext.", "B. You could hash the passwords using the SHA-256 hash function ", "C. You could hash the passwords using the MD5 hash function. ", "D. You could hash the passwords using the SHA-256 hash function with salt "};
